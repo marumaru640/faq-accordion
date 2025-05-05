@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/tip-calculator-gM3JiNDaqh)
-- Live Site URL: [Add live site URL here](https://tip-calculator-zeta-one.vercel.app/)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/faq-accordion-XhzjilwP-u)
+- Live Site URL: [Add live site URL here](https://faq-accordion-olive-iota.vercel.app/)
 
 ## My process
 
