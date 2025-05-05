@@ -1,0 +1,137 @@
+:root {
+  --white: hsl(0, 100%, 100%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-700: hsl(293, 45%, 34%);
+  --purple-950: hsl(292, 42%, 14%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--purple-100);
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+}
+
+main {
+  background: var(--white);
+  min-height: 400px;
+  max-width: 600px;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 10px 18px 36px -10px #c1b2cd;
+  border-radius: 30px;
+  margin-bottom: 5rem;
+}
+
+.accordion_header {
+  display: flex;
+  align-items: center;
+}
+
+.accordion_header h1 {
+  font-size: 4.3rem;
+  margin-left: 1.3rem;
+  color: var(--purple-950);
+}
+
+.accordion_item {
+  border-bottom: 2px solid var(--purple-100);
+  padding: 2rem 0;
+}
+
+.accordion_item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.accordion_question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--purple-950);
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+}
+
+.accordion_question:hover {
+  color: var(--purple-700);
+}
+
+.accordion_answer {
+  color: var(--purple-600);
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  line-height: 1.5;
+
+  opacity: 0;
+  max-height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.accordion_item .accordion_answer {
+  visibility: hidden;
+}
+
+.accordion_item.is-open .accordion_answer {
+  visibility: visible;
+  opacity: 1;
+  max-height: 300px;
+}
+
+.accordion_item .accordion_icon_plus {
+  display: inline;
+}
+
+.accordion_item.is-open .accordion_icon_plus {
+  display: none;
+}
+
+.accordion_item .accordion_icon_minus {
+  display: none;
+}
+
+.accordion_item.is-open .accordion_icon_minus {
+  display: inline;
+}
+
+.accordion_icon_minus,
+.accordion_icon_plus {
+  margin-left: auto;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--purple-600);
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+  color: var(--purple-950);
+}
+
+@media (max-width: 425px) {
+  body {
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-size: contain;
+  }
+}
